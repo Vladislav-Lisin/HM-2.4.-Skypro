@@ -26,8 +26,10 @@ public class Main {
             checkAuthentication("java_skypro_go", "D_1hWiKjjP_9", "D_1hWiKjjP_9");
             System.out.println("Аутентификация успешна!");
 
-        } catch (WrongLoginException | WrongPasswordException e) {
+        } catch (WrongLoginException  e) {
             System.err.println("Ошибка аутентификации: " + e.getMessage());
+        } catch (WrongPasswordException e) {
+            System.err.println("Ошибка соотвествия пароля: " + e.getMessage());
         }
     }
 }
